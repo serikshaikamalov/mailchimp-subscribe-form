@@ -4,7 +4,19 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Mailchimp: Subscribe Form</title>
   </head>
-  <body></body>
+  <body>
+    <form onsubmit="subscribe(event)" id="mailchimp-subscribe-form">
+      <input
+        type="email"
+        placeholder="Enter your email"
+        id="email"
+        name="email"
+        value="serik.shaikamalov@gmail.com"
+      />
+      <button>Subscribe</button>
+    </form>
+    <script src="./mailchimp.js" />
+  </body>
 </html>
