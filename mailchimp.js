@@ -1,4 +1,5 @@
-import jsonp from "https://cdn.jsdelivr.net/npm/jsonp@0.2.1/index.min.js";
+// import jsonp from "https://cdn.jsdelivr.net/npm/jsonp@0.2.1/index.min.js";
+import jsonp from "./jsonp.js";
 
 /**
  * Used to subscribe to the Mailchimp newsletter
