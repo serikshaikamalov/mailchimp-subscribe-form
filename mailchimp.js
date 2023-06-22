@@ -22,20 +22,25 @@ export const subscribe = async (event, _url) => {
     _url ||
     `https://itsnuqtah.us20.list-manage.com/subscribe/post-json?u=1d845a4ca14e641f9ea2e18ef&id=03e21cfcd1&f_id=009856e6f0&EMAIL=${email}`;
 
-  return jsonp(
-    url,
-    {
-      param: "c",
-    },
-    function (err, data) {
-      if (err) {
-        throw new Error(err);
-      } else if (data.result !== "success") {
-        console.log("Mailchimp > ex:", data.msg);
-        throw new Error(data.msg);
-      } else {
-        return data.msg;
+  return new Promise((resolve, reject) => {
+    return jsonp(
+      url,
+      {
+        param: "c",
+      },
+      function (err, data) {
+        if (err) {
+          //   throw new Error(err);
+          reject(err);
+        } else if (data.result !== "success") {
+          console.log("Mailchimp > ex:", data.msg);
+          //   throw new Error(data.msg);
+          reject(data.msg);
+        } else {
+          //   return data.msg;
+          resolve(data.msg);
+        }
       }
-    }
-  );
+    );
+  });
 };
