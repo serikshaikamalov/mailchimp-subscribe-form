@@ -3,7 +3,7 @@
  * @param {*} event - an event of onsubmit handler
  * @param {*} _url - mailchimp provided url. You can get it from admin dashboard
  */
-const subscribe = async (event, _url) => {
+export const subscribe = async (event, _url) => {
   try {
     event.preventDefault();
 
