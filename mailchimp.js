@@ -1,4 +1,3 @@
-// import jsonp from "https://cdn.jsdelivr.net/npm/jsonp@0.2.1/index.min.js";
 import jsonp from "./jsonp.js";
 
 /**
@@ -30,14 +29,11 @@ export const subscribe = async (event, _url) => {
       },
       function (err, data) {
         if (err) {
-          //   throw new Error(err);
           reject(err);
         } else if (data.result !== "success") {
           console.log("Mailchimp > ex:", data.msg);
-          //   throw new Error(data.msg);
           reject(data.msg);
         } else {
-          //   return data.msg;
           resolve(data.msg);
         }
       }
