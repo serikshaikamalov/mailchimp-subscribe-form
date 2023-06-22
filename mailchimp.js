@@ -2,6 +2,7 @@
  * Used to subscribe to the Mailchimp newsletter
  * @param {*} event - an event of onsubmit handler
  * @param {*} _url - mailchimp provided url. You can get it from admin dashboard
+ * @link https://cdn.jsdelivr.net/gh/serikshaikamalov/mailchimp-subscribe-form@main/mailchimp.js
  */
 export const subscribe = async (event, _url) => {
   try {
