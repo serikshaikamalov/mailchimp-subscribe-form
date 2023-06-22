@@ -33,6 +33,7 @@ export const subscribe = async (event, _url) => {
           throw new Error(err);
         } else if (data.result !== "success") {
           console.log("Mailchimp > ex:", data.msg);
+          throw new Error(data.msg);
         } else {
           return data.msg;
         }
