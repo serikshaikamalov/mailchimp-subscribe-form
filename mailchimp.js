@@ -21,7 +21,7 @@ export const subscribe = async (event, _url) => {
     const { email } = formProps;
     const url =
       _url ||
-      `https://itsnuqtah.us20.list-manage.com/subscribe/post-json?u=1d845a4ca14e641f9ea2e18ef&id=03e21cfcd1&f_id=009856e6f0&EMAIL=${email}&c=?`;
+      `https://itsnuqtah.us20.list-manage.com/subscribe/post-json?u=1d845a4ca14e641f9ea2e18ef&id=03e21cfcd1&f_id=009856e6f0&EMAIL=${email}`;
 
     return jsonp(
       url,
